@@ -38,7 +38,7 @@ export class EditBlogsForm extends Component {
     return (
       <div>
         <form onSubmit={this.onSubmit}>
-          <h3>Update Blog</h3>
+          <h3>Update Book</h3>
           <label>
             Title <i className="fas fa-marker"></i>
           </label>

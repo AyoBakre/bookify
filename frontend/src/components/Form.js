@@ -27,7 +27,7 @@ export class Form extends Component {
     return (
       <div className="container">
         <form onSubmit={this.onSubmit}>
-          <h3>New Blog</h3>
+          <h3>New Book</h3>
           <label>Title</label>
           <input
             autoFocus={true}

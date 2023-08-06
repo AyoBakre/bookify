@@ -62,7 +62,7 @@ export class Navbar extends Component {
                 this.props.showAllBlogs();
               }}
             >
-              New Blog
+              New Book
             </span>
           )}
           <button

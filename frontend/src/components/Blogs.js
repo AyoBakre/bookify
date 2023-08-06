@@ -94,7 +94,7 @@ export class Blogs extends Component {
               />
             ) : (
               <div>
-                <h3>All Blogs</h3>
+                <h3>All Books</h3>
                 {this.props.blogs.map((blog) => (
                   <div
                     className="card body card-spacing text-white bg-dark"
@@ -136,7 +136,7 @@ export class Blogs extends Component {
                         this.newPage(blog);
                       }}
                     >
-                      view blog
+                      view book
                     </button>
 
                     {/* Delete Blog */}
