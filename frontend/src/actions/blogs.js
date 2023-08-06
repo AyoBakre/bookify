@@ -6,57 +6,67 @@ import { tokenConfig } from "./auth";
 
 // Read Blogs
 export const getBlogs = () => (dispatch, getState) => {
-  axios
-    .get("http://localhost:8000/api/blogs/", tokenConfig(getState))
-    .then((res) => {
-      dispatch({
-        type: GET_BLOGS,
-        payload: res.data,
-      });
-    })
-    .catch((err) => console.log(err));
+	axios
+		.get(
+			"https://bookify-production.up.railway.app/api/blogs/",
+			tokenConfig(getState)
+		)
+		.then((res) => {
+			dispatch({
+				type: GET_BLOGS,
+				payload: res.data,
+			});
+		})
+		.catch((err) => console.log(err));
 };
 
 // Delete Blogs
 export const deleteBlogs = (id) => (dispatch, getState) => {
-  axios
-    .delete(`http://localhost:8000/api/blogs/${id}/`, tokenConfig(getState))
-    .then((res) => {
-      dispatch({
-        type: DELETE_BLOGS,
-        payload: id,
-      });
-    })
-    .catch((err) => console.log(err));
+	axios
+		.delete(
+			`https://bookify-production.up.railway.app/api/blogs/${id}/`,
+			tokenConfig(getState)
+		)
+		.then((res) => {
+			dispatch({
+				type: DELETE_BLOGS,
+				payload: id,
+			});
+		})
+		.catch((err) => console.log(err));
 };
 
 // Add Blogs
 export const addBlogs = (blog) => (dispatch, getState) => {
-  axios
-    .post("http://localhost:8000/api/blogs/", blog, tokenConfig(getState))
-    .then((res) => {
-      dispatch({
-        type: ADD_BLOGS,
-        payload: res.data,
-      });
-    })
-    .catch((err) => console.log(err));
+	axios
+		.post(
+			"https://bookify-production.up.railway.app/api/blogs/",
+			blog,
+			tokenConfig(getState)
+		)
+		.then((res) => {
+			dispatch({
+				type: ADD_BLOGS,
+				payload: res.data,
+			});
+		})
+		.catch((err) => console.log(err));
 };
 
 // Update/Edit Blogs
 export const updateBlogs = (id, blog) => (dispatch, getState) => {
-  console.log("Action recieved", id, blog);
-  axios
-    .patch(
-      `http://localhost:8000/api/blogs/${id}/`,
-      blog,
-      tokenConfig(getState)
-    )
-    .then((res) => {
-      dispatch({
-        type: UPDATE_BLOGS,
-        payload: res.data,
-      });
-    })
-    .catch((err) => console.log(err));
+	console.log("Action recieved", id, blog);
+	axios
+		.patch(
+			`https://bookify-production.up.railway.app/api/blogs/${id}/`,
+			blog,
+			tokenConfig(getState)
+		)
+		.then((res) => {
+			dispatch({
+				type: UPDATE_BLOGS,
+				payload: res.data,
+			});
+		})
+		.catch((err) => console.log(err));
 };
