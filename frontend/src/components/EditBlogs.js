@@ -35,10 +35,19 @@ export class EditBlogsForm extends Component {
   };
 
   render() {
+    const { isAuthenticated, user } = this.props.auth;
     return (
       <div>
         <form onSubmit={this.onSubmit}>
           <h3>Update Book</h3>
+          <label>Author</label>
+          <input
+            className="form-control"
+            type="text"
+            value={user.username}
+            disabled
+          />
+          <br />
           <label>
             Title <i className="fas fa-marker"></i>
           </label>
@@ -87,4 +96,8 @@ export class EditBlogsForm extends Component {
   }
 }
 
-export default connect(null, { updateBlogs })(EditBlogsForm);
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+export default connect(mapStateToProps, { updateBlogs })(EditBlogsForm);

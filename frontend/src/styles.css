@@ -54,3 +54,45 @@ hr.new1 {
   text-align: justify;
   white-space: pre-line;
 }
+
+/* Blogs.css */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  margin: 0 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.pagination button.active {
+  background-color: #0056b3;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+/* styles.css */
+
+/* Style for the search bar */
+.search-bar {
+  margin-bottom: 20px;
+}
+
+/* Style for the search input */
+.search-bar input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}

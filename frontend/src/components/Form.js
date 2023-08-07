@@ -24,10 +24,20 @@ export class Form extends Component {
   };
 
   render() {
+    const { isAuthenticated, user } = this.props.auth;
+
     return (
       <div className="container">
         <form onSubmit={this.onSubmit}>
           <h3>New Book</h3>
+          <label>Author</label>
+          <input
+            className="form-control"
+            type="text"
+            value={user.username}
+            disabled
+          />
+          <br />
           <label>Title</label>
           <input
             autoFocus={true}
@@ -64,4 +74,8 @@ export class Form extends Component {
   }
 }
 
-export default connect(null, { addBlogs })(Form);
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+export default connect(mapStateToProps, { addBlogs })(Form);
