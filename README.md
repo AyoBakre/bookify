@@ -2,7 +2,8 @@
 A Fullstack CRUD Book App with Django User Authentication (Token Authentication), Technologies Used: React, Redux, Django, REST Framework, Knox, HTML, CSS, Bootstrap and Fontawesome
 
 # Live Website
-https://bookify-d04d6.web.app
+1) React Frontend:  **https://bookify-d04d6.web.app**
+2) Django Api endpoint: **https://bookify-production.up.railway.app/**
 
 # Setting up the Application
 
